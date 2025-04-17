@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timezone Converter & Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
+</head>
+<body>
+
+    <!-- ✅ Navbar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="help.html">Help</a>
+    </nav>
+
+    <!-- ✅ Main Container -->
+    <div class="main-container">
+        <h1>Timezone Converter</h1>
+
+        <!-- ✅ Timezone & Clock Box -->
+        <div class="timezone-box">
+            <h3>Live Clock</h3>
+            <p id="clock">00:00:00 AM</p>
+
+            <div class="input-container">
+                <label for="fromTimezone">From Timezone:</label>
+                <select id="fromTimezone"></select>
+            </div>
+
+            <div class="input-container">
+                <label for="selectedTime">Select Time:</label>
+                <input type="datetime-local" id="selectedTime">
+            </div>
+
+            <div class="input-container">
+                <label for="toTimezone">To Timezone:</label>
+                <select id="toTimezone"></select>
+            </div>
+
+            <button onclick="convertTime()">Convert</button>
+            <div id="result"></div>
+        </div>
+
+        <!-- ✅ Weather Section (Uses To Timezone) -->
+        <div class="weather-box">
+            <h3>Weather Information</h3>
+            <p id="weatherInfo">Weather details will appear here.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
